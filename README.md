@@ -1,6 +1,10 @@
 # Fixed-Stop-Route-Builder
 ###### Note: To run this package, you must supply your own google maps API key in RST/index.html & RSC/index.html
 
+![rst builder](/media/rst_builder_example.png) ![rsc builder](/media/rsc_builder_example.png)
+
+
+
 ### RST Builder
 The _RST_ (Route Segment Template) Builder is used to combine _stations_ and manual way-points to create a segment.
 Stations consist of a station name, and verified geo-location.
