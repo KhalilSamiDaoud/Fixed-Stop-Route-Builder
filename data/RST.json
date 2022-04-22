@@ -1,0 +1,238 @@
+{
+    "rsts": [
+        {
+            "id": 0,
+            "name": "Red Line Out-Bound",
+            "color": "pink",
+            "stops": [
+                {
+                    "id": 0,
+                    "driveTime": 0,
+                    "driveDistance": 0.65,
+                    "arrivalTime": "12:00 AM",
+                    "departureTime": "12:02 AM"
+                },
+                {
+                    "id": 1,
+                    "driveTime": 2.75,
+                    "driveDistance": 1.05,
+                    "arrivalTime": "12:05 AM",
+                    "departureTime": "12:07 AM"
+                },
+                {
+                    "id": 2,
+                    "driveTime": 2.1,
+                    "driveDistance": 0.92,
+                    "arrivalTime": "12:07 AM",
+                    "departureTime": "12:10 AM"
+                }
+            ],
+            "minStartLayover": 10,
+            "minEndLayover": 5,
+            "appliedDays": ["M", "T", "W"]
+        },
+        {
+            "id": 1,
+            "name": "Red Line In-Bound",
+            "color": "red",
+            "stops": [
+                {
+                    "id": 2,
+                    "driveTime": 2.1,
+                    "driveDistance": 0.92,
+                    "arrivalTime": "12:07 AM",
+                    "departureTime": "12:10 AM"
+                },
+                {
+                    "id": 3,
+                    "driveTime": 0,
+                    "driveDistance": 0,
+                    "arrivalTime": "12:00 AM",
+                    "departureTime": "12:00 AM"
+                },
+                {
+                    "id": 0,
+                    "driveTime": 0,
+                    "driveDistance": 0,
+                    "arrivalTime": "12:00 AM",
+                    "departureTime": "12:00 AM"
+                }
+            ],
+            "minStartLayover": 0,
+            "minEndLayover": 0,
+            "appliedDays": ["M", "T", "W"]
+        },
+        {
+            "id": 2,
+            "name": "Blue Line Out-Bound",
+            "color": "dark-blue",
+            "stops": [
+                {
+                    "id": 2,
+                    "driveTime": 0,
+                    "driveDistance": 0,
+                    "arrivalTime": "12:00 AM",
+                    "departureTime": "12:00 AM"
+                },
+                {
+                    "id": 3,
+                    "driveTime": 0,
+                    "driveDistance": 0,
+                    "arrivalTime": "12:00 AM",
+                    "departureTime": "12:00 AM"
+                }
+            ],
+            "minStartLayover": 3,
+            "minEndLayover": 3,
+            "appliedDays": ["M", "T", "W", "R", "F"]
+        },
+        {
+            "id": 9,
+            "name": "Blue Line In-Bound",
+            "color": "blue",
+            "stops": [
+                {
+                    "id": 3,
+                    "driveTime": 0,
+                    "driveDistance": 0,
+                    "arrivalTime": "12:00 AM",
+                    "departureTime": "12:00 AM"
+                },
+                {
+                    "id": 2,
+                    "driveTime": 0,
+                    "driveDistance": 0,
+                    "arrivalTime": "12:00 AM",
+                    "departureTime": "12:00 AM"
+                }
+            ],
+            "minStartLayover": 3,
+            "minEndLayover": 3,
+            "appliedDays": ["M", "T", "W", "R", "F"]
+        },
+        {
+            "id": 3,
+            "name": "Blue Line <on demand>",
+            "color": "orange",
+            "stops": [
+                {
+                    "id": 3,
+                    "driveTime": 0,
+                    "driveDistance": 0,
+                    "arrivalTime": "12:00 AM",
+                    "departureTime": "12:00 AM"
+                },
+                {
+                    "id": 4,
+                    "driveTime": 0,
+                    "driveDistance": 0,
+                    "arrivalTime": "12:00 AM",
+                    "departureTime": "12:00 AM"
+                }
+            ],
+            "minStartLayover": 3,
+            "minEndLayover": 3,
+            "appliedDays": ["M", "T", "W", "R", "F", "S", "U"]
+        },
+        {
+            "id": 4,
+            "name": "Green Line Morning Only",
+            "color": "purple",
+            "stops": [
+                {
+                    "id": 5,
+                    "driveTime": 0,
+                    "driveDistance": 0,
+                    "arrivalTime": "12:00 AM",
+                    "departureTime": "12:00 AM"
+                },
+                {
+                    "id": 6,
+                    "driveTime": 0,
+                    "driveDistance": 0,
+                    "arrivalTime": "12:00 AM",
+                    "departureTime": "12:00 AM"
+                },
+                {
+                    "id": 7,
+                    "driveTime": 0,
+                    "driveDistance": 0,
+                    "arrivalTime": "12:00 AM",
+                    "departureTime": "12:00 AM"
+                },
+                {
+                    "id": 8,
+                    "driveTime": 0,
+                    "driveDistance": 0,
+                    "arrivalTime": "12:00 AM",
+                    "departureTime": "12:00 AM"
+                }
+            ],
+            "minStartLayover": 0,
+            "minaEndLayover": 10,
+            "appliedDays": ["M", "T", "W", "R", "F", "S", "U"]
+        },
+        {
+            "id": 5,
+            "name": "Green Line Out-Bound",
+            "color": "green",
+            "stops": [
+                {
+                    "id": 6,
+                    "driveTime": 0,
+                    "driveDistance": 0,
+                    "arrivalTime": "12:00 AM",
+                    "departureTime": "12:00 AM"
+                },
+                {
+                    "id": 7,
+                    "driveTime": 0,
+                    "driveDistance": 0,
+                    "arrivalTime": "12:00 AM",
+                    "departureTime": "12:00 AM"
+                },
+                {
+                    "id": 8,
+                    "driveTime": 0,
+                    "driveDistance": 0,
+                    "arrivalTime": "12:00 AM",
+                    "departureTime": "12:00 AM"
+                }
+            ],
+            "minStartLayover": 10,
+            "minEndLayover": 0,
+            "appliedDays": ["M", "T", "W", "R", "F", "S", "U"]
+        },
+        {
+            "id": 6,
+            "name": "Green Line In-Bound",
+            "color": "lime",
+            "stops": [
+                {
+                    "id": 8,
+                    "driveTime": 0,
+                    "driveDistance": 0,
+                    "arrivalTime": "12:00 AM",
+                    "departureTime": "12:00 AM"
+                },
+                {
+                    "id": 7,
+                    "driveTime": 0,
+                    "driveDistance": 0,
+                    "arrivalTime": "12:00 AM",
+                    "departureTime": "12:00 AM"
+                },
+                {
+                    "id": 6,
+                    "driveTime": 0,
+                    "driveDistance": 0,
+                    "arrivalTime": "12:00 AM",
+                    "departureTime": "12:00 AM"
+                }
+            ],
+            "minStartLayover": 10,
+            "minEndLayover": 10,
+            "appliedDays": ["M", "T", "W", "R", "F", "S", "U"]
+        }
+    ]
+}

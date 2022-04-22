@@ -1,0 +1,266 @@
+{
+    "rsts": [
+        {
+            "id": 0,
+            "name": "To Hospital & ACM (red)",
+            "color": "pink",
+            "stations": [
+                {
+                    "id": 0,
+                    "driveTime": 0,
+                    "driveDistance": 0,
+                    "arrivalTime": "00:00",
+                    "departureTime": "00:01",
+                    "wayPoints": []
+                },
+                {
+                    "id": 1,
+                    "driveTime": 4,
+                    "driveDistance": 0,
+                    "arrivalTime": "00:05",
+                    "departureTime": "00:06",
+                    "wayPoints": []
+                },
+                {
+                    "id": 2,
+                    "driveTime": 3,
+                    "driveDistance": 0,
+                    "arrivalTime": "00:09",
+                    "departureTime": "00:10",
+                    "wayPoints": []
+                },
+                {
+                    "id": 3,
+                    "driveTime": 1,
+                    "driveDistance": 0,
+                    "arrivalTime": "00:11",
+                    "departureTime": "00:12",
+                    "wayPoints": [
+                        { 
+                            "lat": 39.64887141077392, 
+                            "lng": -78.73083558110511,
+                            "driveTime": 0,
+                            "driveDistance": 0.05
+                        }
+                    ]
+                },
+                {
+                    "id": 4,
+                    "driveTime": 2,
+                    "driveDistance": 0,
+                    "arrivalTime": "00:14",
+                    "departureTime": "00:15",
+                    "wayPoints": []
+                },
+                {
+                    "id": 5,
+                    "driveTime": 3,
+                    "driveDistance": 0,
+                    "arrivalTime": "00:18",
+                    "departureTime": "00:19",
+                    "wayPoints": []
+                },
+                {
+                    "id": 6,
+                    "driveTime": 2,
+                    "driveDistance": 0,
+                    "arrivalTime": "00:22",
+                    "departureTime": "00:23",
+                    "wayPoints": [
+                        {   
+                            "lat": 39.660085399783284,
+                            "lng": -78.73999204504824,
+                            "driveTime": 1,
+                            "driveDistance": 0.5
+                        }
+                    ]
+                }
+            ],
+            "minStartLayover": 0,
+            "minEndLayover": 7,
+            "runTime": 23,
+            "cycleTime": 28,
+            "appliedDays": ["M", "T", "W", "R", "F"]
+        },
+        {
+            "id": 1,
+            "name": "To Virginia Ave",
+            "color": "red",
+            "stations": [
+                {
+                    "id": 0,
+                    "driveTime": 0,
+                    "driveDistance": 0,
+                    "arrivalTime": "00:00",
+                    "departureTime": "00:01",
+                    "wayPoints": []
+                },
+                {
+                    "id": 7,
+                    "driveTime": 2,
+                    "driveDistance": 0,
+                    "arrivalTime": "00:03",
+                    "departureTime": "00:04",
+                    "wayPoints": []
+                },
+                {
+                    "id": 8,
+                    "driveTime": 3,
+                    "driveDistance": 0,
+                    "arrivalTime": "00:07",
+                    "departureTime": "00:08",
+                    "wayPoints": []
+                },
+                {
+                    "id": 9,
+                    "driveTime": 3,
+                    "driveDistance": 0,
+                    "arrivalTime": "00:11",
+                    "departureTime": "00:12",
+                    "wayPoints": []
+                },
+                {
+                    "id": 8,
+                    "driveTime": 5,
+                    "driveDistance": 0,
+                    "arrivalTime": "00:17",
+                    "departureTime": "00:18",
+                    "wayPoints": []
+                },
+                {
+                    "id": 7,
+                    "driveTime": 3,
+                    "driveDistance": 0,
+                    "arrivalTime": "00:20",
+                    "departureTime": "00:21",
+                    "wayPoints": []
+                }
+            ],
+            "minStartLayover": 0,
+            "minEndLayover": 5,
+            "runTime": 21,
+            "cycleTime": 26,
+            "appliedDays": ["M", "T", "W", "R", "F"]
+        },
+        {
+            "id": 2,
+            "name": "To S. Cumberland",
+            "color": "blue",
+            "stations": [
+                {
+                    "id": 0,
+                    "driveTime": 0,
+                    "driveDistance": 0,
+                    "arrivalTime": "00:00",
+                    "departureTime": "00:01",
+                    "wayPoints": []
+                },
+                {
+                    "id": 7,
+                    "driveTime": 2,
+                    "driveDistance": 0,
+                    "arrivalTime": "00:03",
+                    "departureTime": "00:04",
+                    "wayPoints": []
+                },
+                {
+                    "id": 10,
+                    "driveTime": 7,
+                    "driveDistance": 0,
+                    "arrivalTime": "00:11",
+                    "departureTime": "00:12",
+                    "wayPoints": []
+                },
+                {
+                    "id": 11,
+                    "driveTime": 1,
+                    "driveDistance": 0,
+                    "arrivalTime": "00:13",
+                    "departureTime": "00:14",
+                    "wayPoints": []
+                },
+                {
+                    "id": 12,
+                    "driveTime": 1,
+                    "driveDistance": 0,
+                    "arrivalTime": "00:15",
+                    "departureTime": "00:16",
+                    "wayPoints": []
+                },
+                {
+                    "id": 7,
+                    "driveTime": 4,
+                    "driveDistance": 0,
+                    "arrivalTime": "00:20",
+                    "departureTime": "00:21",
+                    "wayPoints": []
+                }
+            ],
+            "minStartLayover": 0,
+            "minEndLayover": 10,
+            "runTime": 20,
+            "cycleTime": 30,
+            "appliedDays": ["M", "T", "W", "R", "F"]
+        },
+        {
+            "id": 3,
+            "name": "To Hospital & ACM (blue)",
+            "color": "dark-blue",
+            "stations": [
+                {
+                    "id": 0,
+                    "driveTime": 0,
+                    "driveDistance": 0,
+                    "arrivalTime": "00:00",
+                    "departureTime": "00:01",
+                    "wayPoints": []
+                },
+                {
+                    "id": 6,
+                    "driveTime": 3,
+                    "driveDistance": 0,
+                    "arrivalTime": "00:04",
+                    "departureTime": "00:05",
+                    "wayPoints": []
+                },
+                {
+                    "id": 3,
+                    "driveTime": 4,
+                    "driveDistance": 0,
+                    "arrivalTime": "00:09",
+                    "departureTime": "00:10",
+                    "wayPoints": []
+                },
+                {
+                    "id": 4,
+                    "driveTime": 0,
+                    "driveDistance": 0,
+                    "arrivalTime": "00:10",
+                    "departureTime": "00:11",
+                    "wayPoints": []
+                },
+                {
+                    "id": 13,
+                    "driveTime": 4,
+                    "driveDistance": 0,
+                    "arrivalTime": "00:15",
+                    "departureTime": "00:16",
+                    "wayPoints": []
+                },
+                {
+                    "id": 6,
+                    "driveTime": 5,
+                    "driveDistance": 0,
+                    "arrivalTime": "00:21",
+                    "departureTime": "00:22",
+                    "wayPoints": []
+                }
+            ],
+            "minStartLayover": 0,
+            "minEndLayover": 5,
+            "runTime": 21,
+            "cycleTime": 26,
+            "appliedDays": ["M", "T", "W", "R", "F"]
+        }
+    ]
+}

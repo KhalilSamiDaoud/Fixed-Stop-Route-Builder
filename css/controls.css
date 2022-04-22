@@ -1,0 +1,323 @@
+label.input-label {
+    display: block;
+    font-size: 16px;
+}
+
+label.input-label.full {
+    width: calc(100% - 10px);
+}
+
+label.input-label p {
+    margin: 10px 0 0 5px;
+}
+
+label.input-label input {
+    margin: 5px 2px 5px 5px;
+}
+
+label.input-label.invalid p::after {
+    content: "\26A0 \00a0 Invalid";
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-left: 10px;
+    width: calc(100% - 2px);
+    color: #ff3960;
+}
+
+label.input-label.invalid input {
+    border-color: #ff3960;
+}
+
+/* LARGE INPUT */
+input[type="inline-large"] {
+    border: none;
+    color: white;
+    width: 100%;
+    height: 35px;
+    margin: 10px 0;
+    font-size: 20px;
+    line-height: 35px;
+    background-color: inherit;
+    border-radius: 2px;
+    text-align: left;
+    outline: none;
+    text-overflow: ellipsis;
+    border-bottom: 1px solid #78909c;
+}
+
+input[type="inline-large"]:focus {
+    border-color: white;
+}
+
+input[type="inline-large"]::placeholder {
+    color: rgba(255, 255, 255, .33);
+}
+
+/* NOTE INPUT */
+textarea.notes {
+    color: white;
+    font-family: sans-serif;
+    width: 100%;
+    min-height: 50px;
+    max-height: 50px;
+    margin: 10px 0 0 0;
+    padding: 5px;
+    font-size: 14px;
+    line-height: 14px;
+    background-color: var(--highlight-color);
+    border-radius: 2px;
+    text-align: left;
+    outline: none;
+    resize: none;
+    border: none;
+}
+
+/* MODAL INPUT STYLES */
+input[type="modal-input"] {
+    border: none;
+    color: white;
+    width: 175px;
+    height: 20px;
+    background-color: var(--highlight-color);
+    border-radius: 2px;
+    text-align: center;
+}
+
+input[type="modal-input"]::placeholder {
+    color: rgba(255, 255, 255, .33);
+}
+
+label.input-label.invalid input[type="modal-input"] {
+    outline: 1px solid #ff3960;
+}
+
+.modal input[type="time"] {
+    border: none;
+    font-family: sans-serif;
+    color: white;
+    width: 175px;
+    height: 20px;
+    background-color: var(--highlight-color);
+    border-radius: 2px;
+    text-align: center;
+}
+
+.modal input[type="time"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+.modal input[type="time"]::-webkit-calendar-picker-indicator,
+.modal input[type="time"]::-webkit-calendar-picker-indicator {
+    color: white;
+    display: none;
+}
+
+.modal label.input-label.invalid input[type="time"] {
+    outline: 1px solid #ff3960;
+}
+
+/* DOTW SELECT */
+label.input-label .weekdays-selector {
+    margin: 5px 2px 5px 5px;
+}
+
+.weekdays-selector input {
+    display: none !important;
+}
+
+.weekdays-selector input[type=checkbox]+label {
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    line-height: 25px;
+    text-align: center;
+    border-radius: 2px;
+    background-color: var(--highlight-color);
+}
+
+.weekdays-selector input[type=checkbox]:not(:disabled)+label:hover {
+    background-color: #648391;
+    cursor: pointer;
+}
+
+.weekdays-selector input[type=checkbox]+label:not(:last-child) {
+    margin-right: 2px;
+}
+
+.weekdays-selector input[type=checkbox]:checked+label {
+    background-color: var(--primary-theme);
+    color: black;
+}
+
+.modal .weekdays-selector input[type=checkbox]:checked+label:hover {
+    background-color: #00ca68;
+}
+
+/* SELECT */
+select {
+    border: none;
+    width: 200px;
+    height: 25px;
+    padding: 3px 0 3px 0;
+    color: white;
+    background-color: var(--highlight-color);
+    border-radius: 2px;
+    text-align: center;
+    text-align-last:center;
+    outline: none;
+}
+
+select.short {
+    width: 125px;
+}
+
+select>option {
+    background-color: var(--background-color);
+}
+
+label.input-label select {
+    flex: 1;
+    margin: 5px 2px 5px 5px;
+}
+
+
+label.input-label.full select {
+    display: block;
+    width: 100%;
+    margin: 5px 2px 5px 5px;
+}
+
+/*CHECK BOX */
+.weekdays-selector {
+    border-radius: 2px;
+    padding: 2px;
+}
+
+.container-checkbox {
+    position: relative;
+    display: block;
+    height: 25px;
+    padding-left: 35px;
+    margin: 6px 0 0 1px;
+    cursor: pointer;
+    font-size: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border-radius: 2px;
+    align-self: center;
+}
+
+.modal label.input-label.invalid .weekdays-selector {
+    outline: 1px solid #ff3960;
+}
+
+.container-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.container-checkbox .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+.container-checkbox:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+.container-checkbox input:checked~.checkmark {
+    background-color: var(--primary-theme);
+}
+
+.container-checkbox input:checked~.checkmark:hover {
+    background-color: #00ca68;
+}
+
+.container-checkbox input:checked~.checkmark:after {
+    display: block;
+}
+
+.container-checkbox .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* BUTTONS */
+button.confirm {
+    all: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 125px;
+    height: 50px;
+    background-color: #40c4ff;
+    color: black;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+button.confirm:hover {
+    background-color: #61cdff;
+}
+
+button.reject {
+    all: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 125px;
+    height: 50px;
+    text-align: center;
+    background-color: #ff3d00;
+    color: white;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+button.reject:hover {
+    background-color: #e63600;
+}
+
+button.confirm>i,
+button.reject>i {
+    margin-left: 10px;
+}
+
+progress {
+    border: none;
+    width: 100%;
+    height: 15px;
+    margin: 5px 0;
+    display: block;
+    appearance: none;
+    -webkit-appearance: none;
+    border-radius: 2px;
+}
+
+progress::-webkit-progress-bar {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 2px;
+}
+
+progress::-webkit-progress-value {
+    background-color: #00e676;
+    border-radius: 2px;
+}

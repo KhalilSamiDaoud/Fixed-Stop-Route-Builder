@@ -1,0 +1,93 @@
+{
+  "rsts": [
+    {
+      "id": 0,
+      "name": "To Hospital & ACM (red)",
+      "color": "pink",
+      "stations": [
+        {
+          "id": 0,
+          "driveTime": -1,
+          "driveDistance": -1,
+          "arrivalTime": "00:00",
+          "departureTime": "00:01",
+          "wayPoints": []
+        },
+        {
+          "id": 1,
+          "driveTime": -1,
+          "driveDistance": -1,
+          "arrivalTime": "00:05",
+          "departureTime": "00:06",
+          "wayPoints": []
+        },
+        {
+          "id": 2,
+          "driveTime": -1,
+          "driveDistance": -1,
+          "arrivalTime": "00:07",
+          "departureTime": "00:09",
+          "wayPoints": []
+        },
+        {
+          "id": 8,
+          "driveTime": -1,
+          "driveDistance": -1,
+          "arrivalTime": "00:10",
+          "departureTime": "00:11",
+          "wayPoints": [
+            {
+              "lat": 39.6488721,
+              "lng": -78.7308345,
+              "driveTime": 1,
+              "driveDistance": 0.5
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "driveTime": -1,
+          "driveDistance": -1,
+          "arrivalTime": "00:12",
+          "departureTime": "00:13",
+          "wayPoints": []
+        },
+        {
+          "id": 4,
+          "driveTime": -1,
+          "driveDistance": -1,
+          "arrivalTime": "00:14",
+          "departureTime": "00:15",
+          "wayPoints": []
+        },
+        {
+          "id": 5,
+          "driveTime": -1,
+          "driveDistance": -1,
+          "arrivalTime": "00:18",
+          "departureTime": "00:19",
+          "wayPoints": []
+        },
+        {
+          "id": 6,
+          "driveTime": -1,
+          "driveDistance": -1,
+          "arrivalTime": "00:22",
+          "departureTime": "00:23",
+          "wayPoints": []
+        }
+      ],
+      "minStartLayover": 0,
+      "minEndLayover": 7,
+      "runTime": 23,
+      "cycleTime": 30,
+      "appliedDays": [
+        "M",
+        "T",
+        "W",
+        "R",
+        "F"
+      ]
+    }
+  ]
+}

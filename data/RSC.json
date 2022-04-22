@@ -1,0 +1,95 @@
+{
+    "rscs": [
+        {
+            "id": 0,
+            "name": "Red Line M-W",
+            "rsts": [0,1,0],
+            "iterations": 6,
+            "startTime": "09:00",
+            "endTime": "16:00",
+            "attributes": [],
+            "headway": 15,
+            "busDisplay": true,
+            "vehicles": 2,
+            "appliedDays": ["M", "T", "W"]
+        },
+        {
+            "id": 1,
+            "name": "Blue Line Early Morning M-F",
+            "rsts": [2,9,3],
+            "iterations": 2,
+            "startTime": "06:00",
+            "endTime": "08:00",
+            "attributes": [],
+            "headway": 20,
+            "busDisplay": true,
+            "vehicles": 1,
+            "appliedDays": ["M", "T", "W", "R", "F"]
+        },
+        {
+            "id": 2,
+            "name": "Blue Line Morning M-F",
+            "rsts": [2,9,3],
+            "iterations": 2,
+            "startTime": "08:00",
+            "endTime": "12:00",
+            "attributes": [],
+            "headway": 12,
+            "busDisplay": false,
+            "vehicles": 2,
+            "appliedDays": ["M", "T", "W", "R", "F"]
+        },
+        {
+            "id": 3,
+            "name": "Green Line Morning M-U",
+            "rsts": [4],
+            "iterations": 2,
+            "startTime": "08:00",
+            "endTime": "12:00",
+            "attributes": [],
+            "headway": 12,
+            "busDisplay": false,
+            "vehicles": 2,
+            "appliedDays": ["M", "T", "W", "R", "F", "S", "U"]
+        },
+        {
+            "id": 4,
+            "name": "Green Line Noon M-U",
+            "rsts": [5,6],
+            "iterations": 1,
+            "startTime": "12:00",
+            "endTime": "13:00",
+            "attributes": [],
+            "headway": 0,
+            "busDisplay": true,
+            "vehicles": 1,
+            "appliedDays": ["M", "T", "W", "R", "F", "S", "U"]
+        },
+        {
+            "id": 5,
+            "name": "Green Line Afternoon M-U",
+            "rsts": [5,6],
+            "iterations": 2,
+            "startTime": "13:00",
+            "endTime": "16:00",
+            "attributes": [],
+            "headway": 5,
+            "busDisplay": true,
+            "vehicles": 1,
+            "appliedDays": ["M", "T", "W", "R", "F", "S", "U"]
+        },
+        {
+            "id": 6,
+            "name": "Green Line Evening M-U",
+            "rsts": [5,6],
+            "iterations": 2,
+            "startTime": "16:00",
+            "endTime": "20:00",
+            "attributes": [],
+            "headway": 10,
+            "busDisplay": true,
+            "vehicles": 2,
+            "appliedDays": ["M", "T", "W", "R", "F", "S", "U"]
+        }
+    ]
+}

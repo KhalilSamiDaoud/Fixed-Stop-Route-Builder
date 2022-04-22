@@ -1,0 +1,238 @@
+.rst-list {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: 375px;
+    padding: 10px;
+    background-color: var(--section-light-color);
+    border-radius: 2px;
+    overflow-y: hidden;
+    transition: all .75s ease-in-out;
+}
+
+.rst-list.collapsed {
+    height: 35px;
+}
+
+
+.rst-list .rst-list-tools {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 35px;
+    gap: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #78909c;
+}
+
+.rst-list .rst-builder {
+    margin-top: 10px;
+    min-height: 60px;
+    max-height: calc(100vh - 225px);
+    overflow-y: scroll;
+}
+
+.rst-list .rst-builder:empty::after {
+    content: "No stations added \1F68F";
+    position: absolute;
+    top: calc(100% - 80px);
+    left: 0;
+    width: calc(100% - 35px);
+    margin: 10px;
+    height: 58px;
+    line-height: 58px;
+    font-size: 22px;
+    text-align: center;
+    border: 1px dashed white;
+    border-radius: 2px;
+}
+
+.rst-list .rst-builder .stop-entry {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-items: center;
+    height: 65px;
+    border-radius: 2px;
+    cursor: default;
+}
+
+.rst-list .rst-builder .stop-entry:hover {
+    background-color: rgb(66, 84, 94);
+}
+
+.rst-list .rst-builder .stop-entry .stop-icon {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+}
+
+.rst-list .rst-builder .stop-entry .stop-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 5px;
+    gap: 5px;
+}
+
+.rst-list .rst-builder .stop-entry .stop-data p {
+    font-size: 14px;
+}
+
+.rst-list .rst-builder .stop-entry .stop-buttons {
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+}
+
+.rst-list .rst-builder .stop-entry:hover .stop-buttons {
+    visibility: visible;
+}
+
+.rst-list .rst-builder .stop-entry input[type="time"] {
+    border: none;
+    font-family: sans-serif;
+    color: white;
+    width: 100px;
+    height: 20px;
+    background-color: var(--highlight-color);
+    border-radius: 2px;
+    text-align: center;
+    cursor: text;
+}
+
+.rst-list .rst-builder .stop-entry input[type="time"][disabled] {
+    opacity: 0.33;
+    cursor: not-allowed;
+}
+
+.rst-list .rst-builder .stop-entry input[type="time"]:invalid,
+.rst-list .rst-builder .stop-entry input[type="time"].attention:invalid {
+    border: 1px solid #ff3960;
+}
+
+.rst-list .rst-builder .stop-entry input[type="time"].attention {
+    border: 1px solid #ffea00;
+}
+
+.rst-list .rst-builder .stop-entry input[type="time"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+.rst-list .rst-builder .stop-entry input[type="time"]::-webkit-calendar-picker-indicator,
+.rst-list .rst-builder .stop-entry input[type="time"]::-webkit-calendar-picker-indicator {
+    color: white;
+    display: none;
+}
+
+.rst-list .rst-builder .stop-entry label.input-label.invalid input[type="time"] {
+    outline: 1px solid #ff3960;
+}
+
+.circle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 35px;
+    max-width: 35px;
+    min-height: 35px;
+    max-height: 35px;
+    background-color: inherit;
+    border: 3px solid white;
+    border-radius: 25px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.diamond-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 32px;
+    max-width: 32px;
+    min-height: 32px;
+    max-height: 32px;
+    background-color: inherit;
+    border: 3px solid white;
+    margin-left: 7px;
+    margin-right: 6px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    transform: rotate(45deg);
+}
+
+.diamond-container i {
+    transform: rotate(-45deg);
+}
+
+.bar {
+    height: 12px;
+    width: 3px;
+    background-color: white;
+}
+
+.bar-short {
+    height: 10px;
+    width: 3px;
+    background-color: white;
+}
+
+.rst-list .rst-builder .waypoint-entry {
+    position: relative;
+    height: 0px;
+    width: 0px;
+    overflow: visible;
+}
+
+.detour {
+    position: absolute;
+    top: -12px;
+    left: 14px;
+    transform: translateX(-2%);
+    color: #00C853;
+    background: rgb(66, 84, 94);
+    background: radial-gradient(circle, rgba(66, 84, 94, 1) 15%, rgba(255, 255, 255, 0) 3%);
+    border-radius: 12px;
+    cursor: pointer;
+    z-index: 9997;
+    transition: all 0.2s ease-in-out;
+}
+
+.detour:hover {
+    box-shadow: 0px 0px 15px rgba(255, 0, 0, 1) inset;
+}
+
+.rst-ghost-placeholder {
+    position: relative;
+    height: 58px;
+    width: calc(100% - 10px);
+    border: 1px dashed white;
+    border-radius: 2px;
+}
+
+.rst-end-placeholder {
+    position: relative;
+    height: 40px;
+    width: calc(100% - 10px);
+    margin: 5px 0;
+}
+
+.rst-end-placeholder::after {
+    content: "\2807";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 17px);
+    padding-left: 17px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 36px;
+    text-align: left;
+}

@@ -1,0 +1,112 @@
+{
+    "stations": [
+        {
+            "id": 0,
+            "name": "Greene St. & S Allegany St.",
+            "type": "station",
+            "color": "black",
+            "icon": "station_icon",
+            "lat": 39.65058177163934,
+            "lng": -78.77354939693728,
+            "address": "",
+            "busDisplay": true,
+            "notes": "route start"
+        },
+        {
+            "id": 1,
+            "name": "Greene St. & S Chase St.",
+            "type": "station",
+            "color": "black",
+            "icon": "station_icon",
+            "lat": 39.6503830094298,
+            "lng": -78.77198357001897,
+            "address": "401 Greene St, Cumberland, MD 21502",
+            "busDisplay": true,
+            "Notes": ""
+        },
+        {
+            "id": 2,
+            "name": "Cumberland St. & N Chase St.",
+            "type": "station",
+            "color": "black",
+            "icon": "station_icon",
+            "lat": 39.653727128460545,
+            "lng": -78.77138190510995,
+            "address": "",
+            "busDisplay": true,
+            "notes": ""
+        },
+        {
+            "id": 3,
+            "name": "Cumberland St. & N Allegany St.",
+            "type": "station",
+            "color": "black",
+            "icon": "station_icon",
+            "lat": 39.65387546059804,
+            "lng": -78.77298210049597,
+            "address": "121 N Allegany St, Cumberland, MD 21502",
+            "busDisplay": true,
+            "notes": ""
+        },
+        {
+            "id": 4,
+            "name": "Cumberland St. & Tilghman St.",
+            "type": "virtual",
+            "color": "black",
+            "icon": "virtual_icon",
+            "lat": 39.6540352365461,
+            "lng": -78.77457245316836,
+            "address": "",
+            "busDisplay": false,
+            "notes": "special offshoot stop"
+        },
+        {
+            "id": 6,
+            "name": "Canal Pl. & S Mechanic St.",
+            "type": "station",
+            "color": "black",
+            "icon": "station_icon",
+            "lat": 39.649667,
+            "lng": -78.761982,
+            "address": "",
+            "busDisplay": true,
+            "notes": ""
+        },
+        {
+            "id": 7,
+            "name": "Market St. & N Mechanic St.",
+            "type": "station",
+            "color": "black",
+            "icon": "station_icon",
+            "lat": 39.65426790108743,
+            "lng": -78.76515569569138,
+            "address": "",
+            "busDisplay": true,
+            "notes": ""
+        },
+        {
+            "id": 5,
+            "name": "W Harrison St. & N George St.",
+            "type": "station",
+            "color": "black",
+            "icon": "station_icon",
+            "lat": 39.65041986542764,
+            "lng": -78.7590588095538,
+            "address": "",
+            "busDisplay": true,
+            "notes": ""
+        },
+        {
+            "id": 8,
+            "name": "N Lee St. & N Mechanic St.",
+            "type": "station",
+            "color": "black",
+            "icon": "station_icon",
+            "lat": 39.65661575672874,
+            "lng": -78.76981427431429,
+            "address": "",
+            "busDisplay": true,
+            "notes": ""
+        }
+    ]
+}

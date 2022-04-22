@@ -1,0 +1,128 @@
+{
+    "rscs": [
+        {
+            "id": 0,
+            "name": "RED LINE (Day Start) M-F",
+            "rsts": [
+                {
+                    "id": 0,
+                    "driveTime": 0
+                }
+            ],
+            "iterations": 1,
+            "startTime": "07:30",
+            "endTime": "08:00",
+            "attributes": [],
+            "headway": 0,
+            "busDisplay": true,
+            "vehicles": 1,
+            "appliedDays": ["M", "T", "W", "R", "F"]
+        },        
+        {
+            "id": 1,
+            "name": "RED LINE (1) M-F",
+            "rsts": [
+                {
+                    "id": 0,
+                    "driveTime": 0
+                },
+                {
+                    "id": 1,
+                    "driveTime": 3
+                }
+            ],
+            "iterations": 8,
+            "startTime": "08:00",
+            "endTime": "12:00",
+            "attributes": [],
+            "headway": 0,
+            "busDisplay": true,
+            "vehicles": 1,
+            "appliedDays": ["M", "T", "W", "R", "F"]
+        },
+        {
+            "id": 4,
+            "name": "RED LINE (2) M-F",
+            "rsts": [
+              {
+                "id": 0,
+                "driveTime": 0
+              },
+              {
+                "id": 1,
+                "driveTime": 3
+              }
+            ],
+            "iterations": 8,
+            "startTime": "13:00",
+            "endTime": "16:00",
+            "attributes": [],
+            "headway": 0,
+            "busDisplay": true,
+            "vehicles": 1,
+            "appliedDays": ["M", "T", "W", "R", "F"]
+        },
+        {
+            "id": 2,
+            "name": "BLUE LINE (1) M-F",
+            "rsts": [
+              {
+                "id": 2,
+                "driveTime": 0
+              },
+              {
+                "id": 3,
+                "driveTime": 1
+              }
+            ],
+            "iterations": 8,
+            "startTime": "08:00",
+            "endTime": "12:00",
+            "attributes": [],
+            "headway": 0,
+            "busDisplay": true,
+            "vehicles": 1,
+            "appliedDays": ["M", "T", "W", "R", "F"]
+        },
+        {
+            "id": 3,
+            "name": "BLUE LINE (Day End) M-F",
+            "rsts": [
+              {
+                "id": 2,
+                "driveTime": 0
+              }
+            ],
+            "iterations": 1,
+            "startTime": "16:00",
+            "endTime": "16:30",
+            "attributes": [],
+            "headway": 0,
+            "busDisplay": true,
+            "vehicles": 1,
+            "appliedDays": ["M", "T", "W", "R", "F"]
+        },
+        {
+            "id": 5,
+            "name": "BLUE LINE (2) M-F",
+            "rsts": [
+              {
+                "id": 2,
+                "driveTime": 0
+              },
+              {
+                "id": 3,
+                "driveTime": 1
+              }
+            ],
+            "iterations": 1,
+            "startTime": "13:00",
+            "endTime": "16:00",
+            "attributes": [],
+            "headway": 0,
+            "busDisplay": true,
+            "vehicles": 1,
+            "appliedDays": ["M", "T", "W", "R", "F"]
+        }
+    ]
+}

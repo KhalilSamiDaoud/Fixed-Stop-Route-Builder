@@ -1,0 +1,177 @@
+/* ===================================================== */
+/* route map (panel) styles */
+/* ===================================================== */
+
+.route-map {
+    flex: 1 1 auto;
+    width: calc(100% - 4px);
+    min-height: 350px;
+    padding: 2px;
+    background-color: var(--section-light-color);
+    border-radius: 2px;
+}
+
+.route-map .panel-header {
+    margin: -2px -2px 0 -2px;
+}
+
+.route-map .route-plot-map {
+    width: 100%;
+    height: calc(100% - 46px);
+    margin-top: 2px;
+    border-radius: 2px;
+}
+
+/* ===================================================== */
+/* full map (full page) styles */
+/* ===================================================== */
+
+.full-map {
+    position: absolute;
+    top: 95px;
+    left: 0px;
+    height: calc(100vh - 95px);
+    width: 100%;
+    user-select: none;
+}
+
+.full-map .route-plot-map {
+    width: inherit;
+    height: inherit;
+}
+
+.map-control-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin: 10px 5px;
+    background-color: var(--section-light-color);
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    color: white;
+    cursor: pointer;
+}
+
+.map-control-button:hover {
+    background-color: var(--background-color);
+}
+
+/* ===================================================== */
+/* location picker map styles */
+/* ===================================================== */
+.location-picker {
+    width: 100%;
+    margin: 0 5px;
+}
+
+.location-picker>p:first-of-type {
+    padding-bottom: 5px;
+}
+
+.location-picker>p:first-of-type.invalid::after {
+    content: "\26A0 \00a0 Invalid";
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-left: 10px;
+    width: calc(100% - 2px);
+    color: #ff3960;
+}
+
+.location-picker>div:first-of-type {
+    height: 300px;
+    width: 500px;
+    border-radius: 2px;
+    user-select: none;
+}
+
+.location-picker .location-input {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 5px 0;
+    gap: 5px;
+}
+
+.location-picker .location-input input {
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 34px;
+    border-radius: 2px;
+    background-color: var(--highlight-color);
+    color: white;
+    padding: 0 5px;
+}
+
+.location-picker .location-input input::placeholder {
+    color: rgba(255, 255, 255, .33);
+}
+
+.location-picker .location-input a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    background-color: var(--section-dark-color);
+    min-height: 35px;
+    min-width: 50px;
+    max-height: 35px;
+    max-width: 50px;
+    cursor: pointer;
+}
+
+.location-picker .location-input a:hover {
+    background-color: rgb(53, 70, 78);
+}
+
+.location-picker .location-input span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    border-radius: 20px;
+    background-color: var(--section-dark-color);
+    opacity: 0.5;
+    min-height: 30px;
+    min-width: 30px;
+    max-height: 30px;
+    max-width: 30px;
+}
+
+.location-picker .location-input span.invalid {
+    background: #ff1744;
+    opacity: 1;
+}
+
+.location-picker .location-input span.valid {
+    background: #00C853;
+    opacity: 1;
+}
+
+/* ===================================================== */
+/* pop-body styles */
+/* ===================================================== */
+
+#pop-body {
+    width: initial;
+    height: initial;
+}
+
+#pop-body .route-map {
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    padding: 10px;
+    background-color: var(--section-light-color);
+    border-radius: 2px;
+}
+
+#pop-body .route-map .route-plot-map {
+    width: 100%;
+    height: calc(100% - 45px);
+    margin-top: 5px;
+    border-radius: 2px;
+}

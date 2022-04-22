@@ -1,0 +1,18 @@
+{
+    "enviorment" : {
+        "mapCenter" : { "lat": 39.652085197118794, "lng": -78.76576562665917 },
+        "mapZoom" : 15,
+        "useTestData" : true
+    },
+    "API" : {
+        "URLbase": "temp",
+        "loadStations": "temp",
+        "loadRSTs": "temp",
+        "loadRSCs": "temp",
+        "loadRoutes": "temp",
+        "saveRSCs": "temp",
+        "saveRoutes": "temp",
+        "saveRSTs": "temp",
+        "saveStations": "temp"
+    }
+}

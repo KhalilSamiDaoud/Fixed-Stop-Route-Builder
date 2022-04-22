@@ -1,0 +1,118 @@
+.station-toolbox {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: 375px;
+    padding: 10px;
+    background-color: var(--section-light-color);
+    border-radius: 2px;
+    overflow-y: hidden;
+    transition: all .75s ease-in-out;
+}
+
+.station-toolbox.collapsed {
+    height: 35px;
+}
+
+.station-list {
+    list-style: none;
+    max-height: calc(100vh - 180px);
+    margin-top: 10px;
+    overflow-y: scroll;
+}
+
+.station-list .station-entry {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    margin: 10px;
+}
+
+.station-list .station-entry:first-child {
+    margin-top: 0;
+}
+
+.station-list .station-entry:not(:last-child) {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #78909c;
+}
+
+.station-list .station-entry .circle-container:hover,
+.station-list .station-entry .diamond-container:hover {
+    cursor: grab;
+    box-shadow: 0 0 5px rgba(255, 255, 255, .33);
+}
+
+.station-list .station-entry .station-data {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-size: 14px;
+}
+
+.station-list .station-entry .entry-buttons {
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.station-list .station-entry:hover .entry-buttons {
+    visibility: visible;
+}
+
+.notes-btn {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.notes-btn:hover {
+    color: white;
+}
+
+.note {
+    position: absolute;
+    top: 105px;
+    left: calc(100% - 415px);
+    transform: translateX(-100%);
+    min-width: 200px;
+    max-width: 400px;
+    height: fit-content;
+    max-height: 25%;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: var(--background-color);
+    border-radius: 2px;
+    z-index: 9997;
+}
+
+.note div:first-of-type {
+    display: flex;
+    flex-direction: row;
+}
+
+.note div:first-of-type>span:first-of-type {
+    margin-right: 10px;
+}
+
+.note div:first-of-type .close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 22px;
+    width: 22px;
+    line-height: 22px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.note div:first-of-type .close:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.note .divider {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}

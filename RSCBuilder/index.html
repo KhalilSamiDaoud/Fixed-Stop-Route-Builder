@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en-US" xml:lang="en-US">
+    <head>
+        <title>Fixed Route Planner - RSC</title>
+
+        <link rel="stylesheet" href="../css/styles_RSCBuilder.css" />
+        <link rel="stylesheet" href="../css/controls.css" />
+        <link id="colors_sheet" rel="stylesheet" href="../css/neonColors.css" />
+        
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com" rel="preconnect" />
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    </head>
+
+    <body class="hidden-scrollbar-primary">
+        <!--preloader-->
+        <div id="pre_loader" class="pre-loader">
+            <img src="../media/ITC LOGO-WHITE.svg" alt="preloader logo"/>
+            <p>Fetching data...</p>
+            <progress class="progress" value="25" max="100"></progress>
+        </div>
+
+        <nav id="side_nav" class="side-nav box-shadow" aria-label="navigation">
+            <div class="side-nav-header">
+                <p>Menu</p>
+                <span id="close_side_nav" class="icon-btn-flat material-icons push-right">close</span>
+            </div>
+
+            <a href="../RSCBuilder/">
+                <span class="material-icons">alt_route</span>
+                <span>Route Configuration</span>
+            </a>
+            <a href="../RSTBuilder/">
+                <span class="material-icons">linear_scale</span>
+                <span>Route Templating</span>
+            </a>
+            <a href="https://itcurves.net/">
+               <span class="material-icons">info</span>
+               <span>Info</span>
+            </a>
+        </nav>
+
+        <header class="header-bar">
+            <span id="open_side_nav" class="menu-btn material-icons">menu</span>
+
+            <span class="header-text material-icons">arrow_forward_ios</span>
+            <span class="header-text">Route Segment Configuration</span>
+
+            <span id="save_changes" class="menu-btn material-icons push-right tooltipped"
+                  style="margin-right: 20px;" data-tooltip="Save Changes" data-direction="left">
+                save
+                <a>!</a>
+            </span>
+
+            <div class="profile-container">
+                <div class="profile-info">
+                    <span class="profile-name">Khalil Daoud</span>
+                    <span class="profile-type">Admin</span>
+                </div>
+                <span class="profile-icon material-icons">account_circle</span>
+            </div>
+        </header>
+
+        <div id="tool_bar" class="tool-bar">
+            <h2 id="tb_rst_name">N/A</h2>
+            <select id="tb_rsc_dd">
+                <!--content filled in toolbar.js-->
+            </select>
+            <div id="tb_dotw" class="weekdays-selector">
+                <input type="checkbox" id="tb-mon" class="weekday" disabled/>
+                <label for="tb-mon">M</label>
+                <input type="checkbox" id="tb-tue" class="weekday" disabled/>
+                <label for="tb-tue">T</label>
+                <input type="checkbox" id="tb-wed" class="weekday" disabled/>
+                <label for="tb-wed">W</label>
+                <input type="checkbox" id="tb-thu" class="weekday" disabled/>
+                <label for="tb-thu">R</label>
+                <input type="checkbox" id="tb-fri" class="weekday" disabled/>
+                <label for="tb-fri">F</label>
+                <input type="checkbox" id="tb-sat" class="weekday" disabled/>
+                <label for="tb-sat">S</label>
+                <input type="checkbox" id="tb-sun" class="weekday" disabled/>
+                <label for="tb-sun">U</label>
+            </div>
+            <div class="divider"></div>
+            <p>Start Time:&nbsp;&nbsp;<span id="tb_start_time">--:-- --</span></p>
+            <div class="divider"></div>
+            <p>End Time:&nbsp;&nbsp;<span id="tb_end_time">--:-- --</span></p>
+            <div class="divider"></div>
+            <p>Headway:&nbsp;&nbsp;<span id="tb_headway">--</span></p>
+            <div class="divider"></div>
+            <p>Vehicles:&nbsp;&nbsp;<span id="tb_vehicles">--</span></p>
+            <div class="divider"></div>
+            <p>Iterations:&nbsp;&nbsp;<span id="tb_iterations">--</span></p>
+            <div class="divider"></div>
+            <p>Iteration Time:&nbsp;&nbsp;<span id="tb_iteration_time">--</span></p>
+        </div>
+
+        <main class="main-content scrollbar-primary">
+            <div class="main-stack">
+                <!--content filled in routeBuilder.js-->
+                <div id="route_builder" class="route-builder scrollbar-primary">
+                    <div id="rsc_id_container" class="rsc-id-container">
+                        <span id="add_route_btn" class="material-icons rsc-id-add icon-btn">add_circle</span>
+                    </div>
+
+                    <div id="rsc_builder_container" class="route-builder-content"></div>
+                </div>
+
+                <!-- content filled in routeBuilder.js -->
+                <div id="route_details" class="route-details scrollbar-primary collapsed">
+                    <div class="panel-header">
+                        <h1>Route Details</h1>
+                        <div>
+                            <select id="select_table_dd" class="short" disabled>
+                                <option value="stop">Stop Table</option>
+                                <option value="rst">RST Breakdown</option>
+                            </select>
+                            <i id="build_route_table" class="material-icons icon-btn-flat small disabled" data-tooltip="Build table" data-direction="up">construction</i>
+                            <i id="expand_route_details" class="material-icons icon-btn-flat small" data-tooltip="Expand table" data-direction="up">expand_less</i>
+                        </div>
+                    </div>
+                    <div id="stop_table" class="stop-table-container scrollbar-primary">
+                        <!-- content filled in routeDetails.js -->
+                    </div>
+                    <div id="rst_table" class="rst-table-container scrollbar-primary">
+                        <!-- content filled in routeDetails.js -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-stack">
+                <!--RST Toolbox-->
+                <div id="rst_toolbox" class="rst-toolbox">
+                    <div class="panel-header">
+                        <h1>RST Toolbox</h1>
+                        <div>
+                            <a id="rst_config" href="../RSTBuilder/" class="material-icons icon-btn-flat small"  
+                            data-tooltip="Edit RST's" data-direction="left">build</a>
+                        </div>
+                    </div>
+
+                    <ul id="rst_toolbox_list" class="rst-list scrollbar-primary">
+                        <!--filled in rstToolBox.js-->
+                    </ul>
+                </div>
+
+                <!--Route Map-->
+                <div id="route_map" class="route-map">
+                    <div class="panel-header">
+                        <h1>Route Map</h1>
+                        <div>
+                            <i id="pop_map" class="material-icons icon-btn-flat small"  data-tooltip="Pop-out" data-direction="left">open_in_new</i>
+                        </div>
+                    </div>
+
+                    <div id="map" class="route-plot-map"></div>
+                </div>
+            </div>
+
+            <!--RSC context menu-->
+            <div id="rsc_context_menu" class="context-menu">
+                <ul>
+                    <li>
+                        <a>
+                            <i class="material-icons">post_add</i>
+                            Add Variation
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <i class="material-icons">edit</i>
+                            Edit Configuration 
+                        </a>
+                    </li>
+                    <li class="attention">
+                        <a>
+                            <i class="material-icons">delete</i>
+                            Delete Configuration
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!--RSC Modal-->
+            <div id="rsc_modal" class="modal" data-persist>
+                <div class="modal-header">
+                    <h1>{{fill}}</h1>
+                </div>
+                <div class="modal-content scrollbar-primary">
+                    <form id="rsc_form">
+                        <div class="modal-row" style="margin-top: 10px;">
+                            <label class="input-label full">
+                                <p>RSC Name: </p>
+                                <input placeholder="Morning In/Out M-F" type="inline-large" id="rsc_name" name="rsc_name">
+                            </label>
+                        </div>
+                        <div class="modal-row" style="margin-top: 10px;">
+                            <label class="input-label">
+                                <p>Start time: </p>
+                                <input placeholder="2:30PM" type="time" id="rsc_start_time" name="rsc_start_time">
+                            </label>
+                            <label class="input-label">
+                                <p>End time: </p>
+                                <input placeholder="6:30PM" type="time" id="rsc_end_time" name="rsc_end_time">
+                            </label>
+                        </div>
+                        <div class="modal-row">
+                            <label class="input-label">
+                                <p>Headway: </p>
+                                <input placeholder="ex: 20" type="modal-input" id="rsc_headway" name="rsc_headway">
+                            </label>
+                        </div>
+                        <div class="modal-row">
+                            <label class="input-label">
+                                <p>Apply to: </p>
+                                <div id="weekdays_selector" class="weekdays-selector">
+                                    <input type="checkbox" id="rsc_monday" class="weekday" />
+                                    <label for="rsc_monday">M</label>
+                                    <input type="checkbox" id="rsc_tuesday" class="weekday" />
+                                    <label for="rsc_tuesday">T</label>
+                                    <input type="checkbox" id="rsc_wednesday" class="weekday" />
+                                    <label for="rsc_wednesday">W</label>
+                                    <input type="checkbox" id="rsc_thursday" class="weekday" />
+                                    <label for="rsc_thursday">R</label>
+                                    <input type="checkbox" id="rsc_friday" class="weekday" />
+                                    <label for="rsc_friday">F</label>
+                                    <input type="checkbox" id="rsc_saturday" class="weekday" />
+                                    <label for="rsc_saturday">S</label>
+                                    <input type="checkbox" id="rsc_sunday" class="weekday" />
+                                    <label for="rsc_sunday">U</label>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="modal-row" style="margin-top: 10px; margin-bottom: 10px;">
+                            <label class="container-checkbox" style="margin-left: 7px">
+                                Display route name on bus
+                                <input type="checkbox" id="rsc_bus_display" name="rsc_bus_display">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <a id="rsc_modal_cancel" href="#" class="toolbar-btn push-left close" style="margin-left: unset !important;">
+                        <span>CANCEL</span>
+                    </a>
+                    <a id="rsc_modal_submit" href="#" class="toolbar-btn">
+                        <span>{{fill}}</span>
+                    </a>
+                </div>
+            </div>
+
+            <!--Route Modal-->
+            <div id="route_modal" class="modal" data-persist>
+                <div class="modal-header">
+                    <h1>{{FILL}}</h1>
+                </div>
+                <div class="modal-content scrollbar-primary">
+                    <form id="route_form" name="route_form">
+                        <div class="modal-row">
+                            <label class="input-label full">
+                                <p>Route Name: </p>
+                                <input placeholder="X LINE" type="inline-large" id="route_name" name="route_name">
+                            </label>
+                        </div>
+                        <div class="modal-row" style="margin-top: 10px;">
+                            <label class="input-label full">
+                                <p>Color: </p>
+                                <select id="route_color" name="route_color">
+                                    <option value="blue">Blue</option>
+                                    <option value="dark-blue">Dark Blue</option>
+                                    <option value="red">Red</option>
+                                    <option value="purple">Purple</option>
+                                    <option value="yellow">Yellow</option>
+                                    <option value="orange">Orange</option>
+                                    <option value="orange">Deep Orange</option>
+                                    <option value="green">Green</option>
+                                    <option value="pink">Pink</option>
+                                    <option value="lime">Lime</option>
+                                </select>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <a id="route_modal_cancel" href="#" class="toolbar-btn push-left close" style="margin-left: unset !important;">
+                        <span>CANCEL</span>
+                    </a>
+                    <a id="route_modal_submit" href="#" class="toolbar-btn">
+                        <span>{{FILL}}</span>
+                    </a>
+                </div>
+            </div>
+
+            <!--Confirmation Modal-->
+            <div id="confirmation_modal" class="modal small no-footer" data-persist>
+                <div class="modal-header">
+                    <h1>Confirm Action</h1>
+                </div>
+                <div class="modal-content">
+                    <div class="modal-row" style="margin-top: 10px; text-align: center;">
+                        <p id="confirmation_message" class="large-text">{{fill}}</p>
+                    </div>
+                    <div class="modal-row center" style="margin-top: 20px;">
+                        <button id="confirmation_reject" class="confirm close">
+                            GO BACK
+                        </button>
+                        <button id="confirmation_confirm" class="reject close">
+                            DELETE
+                            <i class="material-icons">delete_forever</i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!--Rebuild Modal-->
+            <div id="rebuild_modal" class="modal small no-footer" data-persist>
+                <div class="modal-header">
+                    <h1>Confirm Rebuild</h1>
+                </div>
+                <div class="modal-content">
+                    <div class="modal-row" style="margin-top: 10px; text-align: center;">
+                        <p id="rebuild_message" class="large-text">Rebuilding this table will reset all changes made.</p>
+                    </div>
+                    <div class="modal-row center" style="margin-top: 20px;">
+                        <button id="rebuild_reject" class="confirm close">
+                            CANCEL
+                        </button>
+                        <button id="rebuild_confirm" class="reject close">
+                            REBUILD
+                            <i class="material-icons">construction</i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!--Saving Modal-->
+            <div id="processing_modal" class="modal no-footer"  style="width: 300px;" data-persist>
+                <div class="modal-header">
+                    <h1>Saving....</h1>
+                </div>
+                <div class="modal-content">
+                    <progress value="25" max="100"></progress>
+                </div>
+            </div>
+        </main>
+        <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=###&libraries=geometry&v=beta"></script>
+        <script type="module" src="../js/RSC_Builder/main.js"></script>
+    </body> 
+</html>

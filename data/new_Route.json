@@ -1,0 +1,448 @@
+{
+    "routes": [
+        {
+            "id": 0,
+            "name": "RED LINE",
+            "color": "red",
+            "rscs": [0, 1, 4],
+            "stopSequence": [0, 1, 2, 3, 4, 5, 6, 0, 7, 8, 9, 8, 7],
+            "trips": [
+                {
+                    "blockName": "Block #1",
+                    "segments": [
+                        {
+                            "segmentName": "To Hospital & ACM (red)",
+                            "stops": [
+                                { "stopArrivalTime": "07:30", "exclude": false },
+                                { "stopArrivalTime": "07:35", "exclude": false },
+                                { "stopArrivalTime": "07:39", "exclude": false },
+                                { "stopArrivalTime": "07:41", "exclude": false },
+                                { "stopArrivalTime": "07:44", "exclude": false },
+                                { "stopArrivalTime": "07:48", "exclude": true },
+                                { "stopArrivalTime": "07:52", "exclude": false }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "blockName": "Block #1",
+                     "segments": [
+                        {
+                            "segmentName": "To Hospital & ACM (red)",
+                            "stops": [
+                                { "stopArrivalTime": "08:00", "exclude": false },
+                                { "stopArrivalTime": "08:05", "exclude": false },
+                                { "stopArrivalTime": "08:09", "exclude": false },
+                                { "stopArrivalTime": "08:11", "exclude": false },
+                                { "stopArrivalTime": "08:14", "exclude": false },
+                                { "stopArrivalTime": "08:18", "exclude": true },
+                                { "stopArrivalTime": "08:22", "exclude": false }
+                            ]
+                        },
+                        {
+                            "segmentName": "To Virginia Ave",
+                            "stops": [
+                                { "stopArrivalTime": "08:30", "exclude": false },
+                                { "stopArrivalTime": "08:33", "exclude": false },
+                                { "stopArrivalTime": "08:37", "exclude": false },
+                                { "stopArrivalTime": "08:41", "exclude": false },
+                                { "stopArrivalTime": "08:47", "exclude": false },
+                                { "stopArrivalTime": "08:50", "exclude": false }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "blockName": "Block #1",
+                     "segments": [
+                        {
+                            "segmentName": "To Hospital & ACM (red)",
+                            "stops": [
+                                { "stopArrivalTime": "09:00", "exclude": false },
+                                { "stopArrivalTime": "09:05", "exclude": false },
+                                { "stopArrivalTime": "09:09", "exclude": false },
+                                { "stopArrivalTime": "09:11", "exclude": false },
+                                { "stopArrivalTime": "09:14", "exclude": false },
+                                { "stopArrivalTime": "09:18", "exclude": false },
+                                { "stopArrivalTime": "09:22", "exclude": false }
+                            ]
+                        },
+                        {
+                            "segmentName": "To Virginia Ave",
+                            "stops": [
+                                { "stopArrivalTime": "09:30", "exclude": false },
+                                { "stopArrivalTime": "09:33", "exclude": false },
+                                { "stopArrivalTime": "09:37", "exclude": false },
+                                { "stopArrivalTime": "09:41", "exclude": false },
+                                { "stopArrivalTime": "09:47", "exclude": false },
+                                { "stopArrivalTime": "09:50", "exclude": false }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "blockName": "Block #1",
+                     "segments": [
+                        {
+                            "segmentName": "To Hospital & ACM (red)",
+                            "stops": [
+                                { "stopArrivalTime": "10:00", "exclude": false },
+                                { "stopArrivalTime": "10:05", "exclude": false },
+                                { "stopArrivalTime": "10:09", "exclude": false },
+                                { "stopArrivalTime": "10:11", "exclude": false },
+                                { "stopArrivalTime": "10:14", "exclude": false },
+                                { "stopArrivalTime": "10:18", "exclude": true },
+                                { "stopArrivalTime": "10:22", "exclude": false }
+                            ]
+                        },
+                        {
+                            "segmentName": "To Virginia Ave",
+                            "stops": [
+                                { "stopArrivalTime": "10:30", "exclude": false },
+                                { "stopArrivalTime": "10:33", "exclude": false },
+                                { "stopArrivalTime": "10:37", "exclude": false },
+                                { "stopArrivalTime": "10:41", "exclude": false },
+                                { "stopArrivalTime": "10:47", "exclude": false },
+                                { "stopArrivalTime": "10:50", "exclude": false }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "blockName": "Block #1",
+                     "segments": [
+                        {
+                            "segmentName": "To Hospital & ACM (red)",
+                            "stops": [
+                                { "stopArrivalTime": "11:00", "exclude": false },
+                                { "stopArrivalTime": "11:05", "exclude": false },
+                                { "stopArrivalTime": "11:09", "exclude": false },
+                                { "stopArrivalTime": "11:11", "exclude": false },
+                                { "stopArrivalTime": "11:14", "exclude": false },
+                                { "stopArrivalTime": "11:18", "exclude": true },
+                                { "stopArrivalTime": "11:22", "exclude": false }
+                            ]
+                        },
+                        {
+                            "segmentName": "To Virginia Ave",
+                            "stops": [
+                                { "stopArrivalTime": "11:30", "exclude": false },
+                                { "stopArrivalTime": "11:33", "exclude": false },
+                                { "stopArrivalTime": "11:37", "exclude": false },
+                                { "stopArrivalTime": "11:41", "exclude": false },
+                                { "stopArrivalTime": "11:47", "exclude": false },
+                                { "stopArrivalTime": "11:50", "exclude": false }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "blockName": "Block #1",
+                     "segments": [
+                        {
+                            "segmentName": "To Hospital & ACM (red)",
+                            "stops": [
+                                { "stopArrivalTime": "13:00", "exclude": false },
+                                { "stopArrivalTime": "13:05", "exclude": false },
+                                { "stopArrivalTime": "13:09", "exclude": false },
+                                { "stopArrivalTime": "13:11", "exclude": false },
+                                { "stopArrivalTime": "13:14", "exclude": false },
+                                { "stopArrivalTime": "13:18", "exclude": true },
+                                { "stopArrivalTime": "13:22", "exclude": false }
+                            ]
+                        },
+                        {
+                            "segmentName": "To Virginia Ave",
+                            "stops": [
+                                { "stopArrivalTime": "13:30", "exclude": false },
+                                { "stopArrivalTime": "13:33", "exclude": false },
+                                { "stopArrivalTime": "13:37", "exclude": false },
+                                { "stopArrivalTime": "13:41", "exclude": false },
+                                { "stopArrivalTime": "13:47", "exclude": false },
+                                { "stopArrivalTime": "13:50", "exclude": false }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "blockName": "Block #1",
+                     "segments": [
+                        {
+                            "segmentName": "To Hospital & ACM (red)",
+                            "stops": [
+                                { "stopArrivalTime": "14:00", "exclude": false },
+                                { "stopArrivalTime": "14:05", "exclude": false },
+                                { "stopArrivalTime": "14:09", "exclude": false },
+                                { "stopArrivalTime": "14:11", "exclude": false },
+                                { "stopArrivalTime": "14:14", "exclude": false },
+                                { "stopArrivalTime": "14:18", "exclude": false },
+                                { "stopArrivalTime": "14:22", "exclude": false }
+                            ]
+                        },
+                        {
+                            "segmentName": "To Virginia Ave",
+                            "stops": [
+                                { "stopArrivalTime": "14:30", "exclude": false },
+                                { "stopArrivalTime": "14:33", "exclude": false },
+                                { "stopArrivalTime": "14:37", "exclude": false },
+                                { "stopArrivalTime": "14:41", "exclude": false },
+                                { "stopArrivalTime": "14:47", "exclude": false },
+                                { "stopArrivalTime": "14:50", "exclude": false }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "blockName": "Block #1",
+                     "segments": [
+                        {
+                            "segmentName": "To Hospital & ACM (red)",
+                            "stops": [
+                                { "stopArrivalTime": "15:00", "exclude": false },
+                                { "stopArrivalTime": "15:05", "exclude": false },
+                                { "stopArrivalTime": "15:09", "exclude": false },
+                                { "stopArrivalTime": "15:11", "exclude": false },
+                                { "stopArrivalTime": "15:14", "exclude": false },
+                                { "stopArrivalTime": "15:18", "exclude": true },
+                                { "stopArrivalTime": "15:22", "exclude": false }
+                            ]
+                        },
+                        {
+                            "segmentName": "To Virginia Ave",
+                            "stops": [
+                                { "stopArrivalTime": "15:30", "exclude": false },
+                                { "stopArrivalTime": "15:33", "exclude": false },
+                                { "stopArrivalTime": "15:37", "exclude": false },
+                                { "stopArrivalTime": "15:41", "exclude": false },
+                                { "stopArrivalTime": "15:47", "exclude": false },
+                                { "stopArrivalTime": "15:50", "exclude": false }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "name": "BLUE LINE",
+            "color": "blue",
+            "rscs": [2, 5, 3],
+            "stopSequence": [0, 7, 10, 11, 12, 7, 0, 6, 3, 4, 13, 6],
+            "trips": [
+                {
+                    "blockName": "Block #1",
+                    "segments": [
+                        {
+                            "segmentName": "To S. Cumberland",
+                            "stops": [
+                                { "stopArrivalTime": "08:00", "exclude": false },
+                                { "stopArrivalTime": "08:03", "exclude": false },
+                                { "stopArrivalTime": "08:11", "exclude": true },
+                                { "stopArrivalTime": "08:13", "exclude": false },
+                                { "stopArrivalTime": "08:15", "exclude": false },
+                                { "stopArrivalTime": "08:20", "exclude": false }
+                            ]
+                        },
+                        {
+                            "segmentName": "To Hospital & ACM (blue)",
+                            "stops": [
+                                { "stopArrivalTime": "08:30", "exclude": false },
+                                { "stopArrivalTime": "08:34", "exclude": false },
+                                { "stopArrivalTime": "08:39", "exclude": false },
+                                { "stopArrivalTime": "08:40", "exclude": false },
+                                { "stopArrivalTime": "08:45", "exclude": false },
+                                { "stopArrivalTime": "08:51", "exclude": false }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "blockName": "Block #1",
+                    "segments": [
+                        {
+                            "segmentName": "To S. Cumberland",
+                            "stops": [
+                                { "stopArrivalTime": "09:00", "exclude": false },
+                                { "stopArrivalTime": "09:03", "exclude": false },
+                                { "stopArrivalTime": "09:11", "exclude": false },
+                                { "stopArrivalTime": "09:13", "exclude": false },
+                                { "stopArrivalTime": "09:15", "exclude": false },
+                                { "stopArrivalTime": "09:20", "exclude": false }
+                            ]
+                        },
+                        {
+                            "segmentName": "To Hospital & ACM (blue)",
+                            "stops": [
+                                { "stopArrivalTime": "09:30", "exclude": false },
+                                { "stopArrivalTime": "09:34", "exclude": false },
+                                { "stopArrivalTime": "09:39", "exclude": false },
+                                { "stopArrivalTime": "09:40", "exclude": true },
+                                { "stopArrivalTime": "09:45", "exclude": true },
+                                { "stopArrivalTime": "09:45", "exclude": false }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "blockName": "Block #1",
+                    "segments": [
+                        {
+                            "segmentName": "To S. Cumberland",
+                            "stops": [
+                                { "stopArrivalTime": "10:00", "exclude": false },
+                                { "stopArrivalTime": "10:03", "exclude": false },
+                                { "stopArrivalTime": "10:11", "exclude": true },
+                                { "stopArrivalTime": "10:13", "exclude": false },
+                                { "stopArrivalTime": "10:15", "exclude": false },
+                                { "stopArrivalTime": "10:20", "exclude": false }
+                            ]
+                        },
+                        {
+                            "segmentName": "To Hospital & ACM (blue)",
+                            "stops": [
+                                { "stopArrivalTime": "10:30", "exclude": false },
+                                { "stopArrivalTime": "10:34", "exclude": false },
+                                { "stopArrivalTime": "10:39", "exclude": false },
+                                { "stopArrivalTime": "10:40", "exclude": false },
+                                { "stopArrivalTime": "10:45", "exclude": false },
+                                { "stopArrivalTime": "10:51", "exclude": false }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "blockName": "Block #1",
+                    "segments": [
+                        {
+                            "segmentName": "To S. Cumberland",
+                            "stops": [
+                                { "stopArrivalTime": "11:00", "exclude": false },
+                                { "stopArrivalTime": "11:03", "exclude": false },
+                                { "stopArrivalTime": "11:11", "exclude": false },
+                                { "stopArrivalTime": "11:13", "exclude": false },
+                                { "stopArrivalTime": "11:15", "exclude": false },
+                                { "stopArrivalTime": "11:20", "exclude": false }
+                            ]
+                        },
+                        {
+                            "segmentName": "To Hospital & ACM (blue)",
+                            "stops": [
+                                { "stopArrivalTime": "11:30", "exclude": false },
+                                { "stopArrivalTime": "11:34", "exclude": false },
+                                { "stopArrivalTime": "11:39", "exclude": false },
+                                { "stopArrivalTime": "11:40", "exclude": true },
+                                { "stopArrivalTime": "11:45", "exclude": true },
+                                { "stopArrivalTime": "11:45", "exclude": false }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "blockName": "Block #1",
+                    "segments": [
+                        {
+                            "segmentName": "To S. Cumberland",
+                            "stops": [
+                                { "stopArrivalTime": "13:00", "exclude": false },
+                                { "stopArrivalTime": "13:03", "exclude": false },
+                                { "stopArrivalTime": "13:11", "exclude": true },
+                                { "stopArrivalTime": "13:13", "exclude": false },
+                                { "stopArrivalTime": "13:15", "exclude": false },
+                                { "stopArrivalTime": "13:20", "exclude": false }
+                            ]
+                        },
+                        {
+                            "segmentName": "To Hospital & ACM (blue)",
+                            "stops": [
+                                { "stopArrivalTime": "13:30", "exclude": false },
+                                { "stopArrivalTime": "13:34", "exclude": false },
+                                { "stopArrivalTime": "13:39", "exclude": false },
+                                { "stopArrivalTime": "13:40", "exclude": false },
+                                { "stopArrivalTime": "13:45", "exclude": false },
+                                { "stopArrivalTime": "13:51", "exclude": false }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "blockName": "Block #1",
+                    "segments": [
+                        {
+                            "segmentName": "To S. Cumberland",
+                            "stops": [
+                                { "stopArrivalTime": "14:00", "exclude": false },
+                                { "stopArrivalTime": "14:03", "exclude": false },
+                                { "stopArrivalTime": "14:11", "exclude": false },
+                                { "stopArrivalTime": "14:13", "exclude": false },
+                                { "stopArrivalTime": "14:15", "exclude": false },
+                                { "stopArrivalTime": "14:20", "exclude": false }
+                            ]
+                        },
+                        {
+                            "segmentName": "To Hospital & ACM (blue)",
+                            "stops": [
+                                { "stopArrivalTime": "14:30", "exclude": false },
+                                { "stopArrivalTime": "14:34", "exclude": false },
+                                { "stopArrivalTime": "14:39", "exclude": false },
+                                { "stopArrivalTime": "14:40", "exclude": true },
+                                { "stopArrivalTime": "14:45", "exclude": true },
+                                { "stopArrivalTime": "14:45", "exclude": false }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "blockName": "Block #1",
+                    "segments": [
+                        {
+                            "segmentName": "To S. Cumberland",
+                            "stops": [
+                                { "stopArrivalTime": "15:00", "exclude": false },
+                                { "stopArrivalTime": "15:03", "exclude": false },
+                                { "stopArrivalTime": "15:11", "exclude": true },
+                                { "stopArrivalTime": "15:13", "exclude": false },
+                                { "stopArrivalTime": "15:15", "exclude": false },
+                                { "stopArrivalTime": "15:20", "exclude": false }
+                            ]
+                        },
+                        {
+                            "segmentName": "To Hospital & ACM (blue)",
+                            "stops": [
+                                { "stopArrivalTime": "15:30", "exclude": false },
+                                { "stopArrivalTime": "15:34", "exclude": false },
+                                { "stopArrivalTime": "15:39", "exclude": false },
+                                { "stopArrivalTime": "15:40", "exclude": false },
+                                { "stopArrivalTime": "15:45", "exclude": false },
+                                { "stopArrivalTime": "15:51", "exclude": false }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "blockName": "Block #1",
+                    "segments": [
+                        {
+                            "segmentName": "To S. Cumberland",
+                            "stops": [
+                                { "stopArrivalTime": "16:00", "exclude": false },
+                                { "stopArrivalTime": "16:03", "exclude": false },
+                                { "stopArrivalTime": "16:11", "exclude": false },
+                                { "stopArrivalTime": "16:13", "exclude": false },
+                                { "stopArrivalTime": "16:15", "exclude": false },
+                                { "stopArrivalTime": "16:20", "exclude": false }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "GREEN LINE",
+            "color": "green",
+            "rscs": [],
+            "stopSequence": [],
+            "trips": []
+        }
+    ]
+}

@@ -1,0 +1,172 @@
+{
+    "stations": [
+        {
+            "id": 0,
+            "name": "Frederick Street",
+            "type": "hub",
+            "color": "red",
+            "icon": "hub_icon",
+            "lat": 39.65230064330582,
+            "lng": -78.76350381045746,
+            "address": "1 Frederick St, Cumberland",
+            "busDisplay": true,
+            "notes": "route start"
+        },
+        {
+            "id": 1,
+            "name": "Kent Ave Johnson Heights",
+            "type": "station",
+            "color": "pink",
+            "icon": "station_icon",
+            "lat": 39.641206816343725,
+            "lng": -78.75201060459298,
+            "address": "625 Kent Ave, Cumberland",
+            "busDisplay": true,
+            "notes": ""
+        },
+        {
+            "id": 2,
+            "name": "Health Department",
+            "type": "station",
+            "color": "pink",
+            "icon": "station_icon",
+            "lat": 39.647803262943114,
+            "lng": -78.73139838984454,
+            "address": "12501 Willowbrook Rd, Cumberland",
+            "busDisplay": true,
+            "notes": ""
+        },
+        {
+            "id": 3,
+            "name": "WHMS - Hospital",
+            "type": "station",
+            "color": "pink",
+            "icon": "station_icon",
+            "lat": 39.64969346236622,
+            "lng": -78.7322585499185,
+            "address": "",
+            "busDisplay": true,
+            "notes": ""
+        },
+        {
+            "id": 4,
+            "name": "Allegany College of Maryland",
+            "type": "station",
+            "color": "pink",
+            "icon": "station_icon",
+            "lat": 39.65146581027205,
+            "lng": -78.72983842926037,
+            "address": "12401 Willowbrook Rd, Cumberland",
+            "busDisplay": true,
+            "notes": ""
+        },
+        {
+            "id": 5,
+            "name": "Finan Center",
+            "type": "station",
+            "color": "pink",
+            "icon": "station_icon",
+            "lat": 39.65675806761605,
+            "lng": -78.73505331115685,
+            "address": "10102 Country Club Rd, Cumberland",
+            "busDisplay": true,
+            "notes": ""
+        },
+        {
+            "id": 6,
+            "name": "Decatur St. & Baltimore Ave",
+            "type": "station",
+            "color": "pink",
+            "icon": "station_icon",
+            "lat": 39.65404446042772,
+            "lng": -78.7570656870117,
+            "address": "2 Decatur St, Cumberland",
+            "busDisplay": true,
+            "notes": ""
+        },
+        {
+            "id": 7,
+            "name": "Cumberland Martin's",
+            "type": "station",
+            "color": "red",
+            "icon": "station_icon",
+            "lat": 39.646274396849414,
+            "lng": -78.75809220010917,
+            "address": "739 Park St, Cumberland",
+            "busDisplay": true,
+            "notes": ""
+        },
+        {
+            "id": 8,
+            "name": "HRDC Virginia Avenue",
+            "type": "station",
+            "color": "red",
+            "icon": "station_icon",
+            "lat": 39.63693011552044,
+            "lng": -78.7625551473757,
+            "address": "125 Virginia Ave, Cumberland",
+            "busDisplay": true,
+            "notes": ""
+        },
+        {
+            "id": 9,
+            "name": "Potomac St. & Virginia Ave",
+            "type": "station",
+            "color": "red",
+            "icon": "station_icon",
+            "lat": 39.62579127377642,
+            "lng": -78.76912981976326,
+            "address": "1400 Virginia Ave, Cumberland",
+            "busDisplay": true,
+            "notes": ""
+        },
+        {
+            "id": 10,
+            "name": "S. Cumberland Marketplace",
+            "type": "station",
+            "color": "blue",
+            "icon": "station_icon",
+            "lat": 39.631074571070194,
+            "lng": -78.74954958461686,
+            "address": "",
+            "busDisplay": true,
+            "notes": ""
+        },
+        {
+            "id": 11,
+            "name": "Mt. View Apts/Cascades",
+            "type": "station",
+            "color": "blue",
+            "icon": "station_icon",
+            "lat": 39.633073397677265,
+            "lng": -78.75283766010622,
+            "address": "",
+            "busDisplay": true,
+            "notes": ""
+        },
+        {
+            "id": 12,
+            "name": "Archway / Jane Frazier",
+            "type": "station",
+            "color": "blue",
+            "icon": "station_icon",
+            "lat": 39.63521869999291,
+            "lng": -78.75452429950255,
+            "address": "122 Memorial Ave, Cumberland",
+            "busDisplay": true,
+            "notes": ""
+        },
+        {
+            "id": 13,
+            "name": "Cumberland Meadows Apts",
+            "type": "station",
+            "color": "dark-blue",
+            "icon": "station_icon",
+            "lat": 39.65594836003954,
+            "lng": -78.73140494205349,
+            "address": "12500O Willowbrook Rd, Cumberland",
+            "busDisplay": true,
+            "notes": ""
+        }
+    ]
+}

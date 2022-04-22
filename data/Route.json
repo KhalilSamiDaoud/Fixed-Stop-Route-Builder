@@ -1,0 +1,25 @@
+{
+    "routes": [
+        {
+            "id": 0,
+            "name": "RED LINE",
+            "color": "red",
+            "rscs": [0],
+            "trips": []
+        },
+        {
+            "id": 1,
+            "name": "BLUE LINE",
+            "color": "blue",
+            "rscs": [1,2],
+            "trips": []
+        },
+        {
+            "id": 2,
+            "name": "GREEN LINE",
+            "color": "green",
+            "rscs": [3,4,5,6],
+            "trips": []
+        }
+    ]
+}

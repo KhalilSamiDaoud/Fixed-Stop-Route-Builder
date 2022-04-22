@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en-US" xml:lang="en-US">
+    <head>
+        <title>Fixed Route Planner - RST</title>
+
+        <link rel="stylesheet" href="../css/styles_RSTBuilder.css" />
+        <link rel="stylesheet" href="../css/controls.css" />
+        <link id="colors_sheet" rel="stylesheet" href="../css/neonColors.css" />
+        
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com" rel="preconnect" />
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    </head>
+
+    <body class="hidden-scrollbar-primary">
+        <!--preloader-->
+        <div id="pre_loader" class="pre-loader">
+            <img src="../media/ITC LOGO-WHITE.svg" alt="preloader logo"/>
+            <p>Fetching data...</p>
+            <progress class="progress" value="25" max="100"></progress>
+        </div>
+
+        <nav id="side_nav" class="side-nav box-shadow" aria-label="navigation">
+            <div class="side-nav-header">
+                <p>Menu</p>
+                <span id="close_side_nav" class="icon-btn-flat material-icons push-right">close</span>
+            </div>
+
+            <a href="../RSCBuilder/">
+                <span class="material-icons">alt_route</span>
+                <span>Route Configuration</span>
+            </a>
+            <a href="../RSTBuilder/">
+                <span class="material-icons">linear_scale</span>
+                <span>Route Templating</span>
+            </a>
+            <a href="https://itcurves.net/">
+               <span class="material-icons">info</span>
+               <span>Info</span>
+            </a>
+        </nav>
+
+        <header class="header-bar">
+            <span id="open_side_nav" class="menu-btn material-icons">menu</span>
+
+            <span class="header-text material-icons">arrow_forward_ios</span>
+            <span class="header-text">Route Segment Templating</span>
+
+            <span id="save_changes" class="menu-btn material-icons push-right tooltipped"
+                  style="margin-right: 20px;" data-tooltip="Save Changes" data-direction="left">
+                save
+                <a>!</a>
+            </span>
+
+            <div class="profile-container">
+                <div class="profile-info">
+                    <span class="profile-name">Khalil Daoud</span>
+                    <span class="profile-type">Admin</span>
+                </div>
+                <span class="profile-icon material-icons">account_circle</span>
+            </div>
+        </header>
+
+        <div id="tool_bar" class="tool-bar">
+            <div class="rst-block" id="tb_rst_block"><p>N/A</p></div>
+            <div id="tb_dotw" class="weekdays-selector">
+                <input type="checkbox" id="tb-mon" class="weekday" disabled/>
+                <label for="tb-mon">M</label>
+                <input type="checkbox" id="tb-tue" class="weekday" disabled/>
+                <label for="tb-tue">T</label>
+                <input type="checkbox" id="tb-wed" class="weekday" disabled/>
+                <label for="tb-wed">W</label>
+                <input type="checkbox" id="tb-thu" class="weekday" disabled/>
+                <label for="tb-thu">R</label>
+                <input type="checkbox" id="tb-fri" class="weekday" disabled/>
+                <label for="tb-fri">F</label>
+                <input type="checkbox" id="tb-sat" class="weekday" disabled/>
+                <label for="tb-sat">S</label>
+                <input type="checkbox" id="tb-sun" class="weekday" disabled/>
+                <label for="tb-sun">U</label>
+            </div>
+            <div class="divider"></div>
+            <p>Min Start Layover:&nbsp;&nbsp;<span id="tb_start_layover">--</span></p>
+            <div class="divider"></div>
+            <p>Min End Layover:&nbsp;&nbsp;<span id="tb_end_layover">--</span></p>
+            <div class="divider"></div>
+            <p>Run Time:&nbsp;&nbsp;<span id="tb_runtime">--</span></p>
+            <div class="divider"></div>
+            <p>Cycle Time:&nbsp;&nbsp;<span id="tb_cycletime">--</span></p>
+            <div class="divider"></div>
+            <p>Stops:&nbsp;&nbsp;<span id="tb_stops">--</span></p>
+        </div>
+
+        <main class="main-content scrollbar-primary">
+            <div class="full-map">
+                <div id="map" class="route-plot-map"></div>
+            </div>
+
+            <div class="panel-container left">
+                <div id="rst_list" class="rst-list">
+                    <div class="panel-header">
+                        <h1 id="rst_builder_header">RST Builder</h1>
+                        <div>
+                            <i id="add_new_rst" class="material-icons icon-btn-flat small" data-tooltip="Add RST" data-direction="left">add_circle</i>
+                            <i id="toggle_rst_list" class="material-icons icon-btn-flat small" data-tooltip="Collapse" data-direction="right">expand_less</i>
+                        </div>
+                    </div>
+                    <div class="rst-list-tools">
+                        <select id="select_rst_dd">
+                        </select>
+                        <i id="edit_curr_rst" class="material-icons icon-btn-flat small push-right disabled">edit</i>
+                        <i id="delete_curr_rst" class="material-icons icon-btn-flat small disabled">delete</i>
+                    </div>
+                    <div id="rst_builder_container">
+                        <!--content filled by stationToolbox.js-->
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-container right">
+                <div id="station_toolbox" class="station-toolbox">
+                    <div class="panel-header">
+                        <h1>Station Toolbox</h1>
+                        <div>
+                            <i id="add_new_station" class="material-icons icon-btn-flat small" data-tooltip="Add Station" data-direction="left">add_circle</i>
+                            <i id="toggle_station_list" class="material-icons icon-btn-flat small" data-tooltip="Collapse" data-direction="left">expand_less</i>
+                        </div>
+                    </div>
+                    <ul id="station_toolbox_list" class="station-list scrollbar-primary">
+                        <!--content filled by stationToolbox.js-->
+                    </ul>
+                </div>
+            </div>
+
+            <!--station Modal-->
+            <div id="station_modal" class="modal" data-persist>
+                <div class="modal-header">
+                    <h1>{{fill}}</h1>
+                </div>
+                <div class="modal-content scrollbar-primary">
+                    <form id="station_form">
+                        <div class="modal-row" style="margin-top: 10px;">
+                            <label class="input-label full">
+                                <p>Station Name: </p>
+                                <input placeholder="Main Street & 1st Ave" type="inline-large" id="station_name" name="station_name">
+                            </label>
+                        </div>
+                        <div class="modal-row" style="margin-top: 10px;">
+                            <label class="input-label">
+                                <p>Station Type: </p>
+                                <select id="station_type" name="station_type">
+                                    <option value="hub">Hub</option>
+                                    <option value="station">Station</option>
+                                    <option value="virtual">Virtual</option>
+                                    <option value="request">On Request</option>
+                                </select>
+                            </label>
+                            <label class="input-label">
+                                <p>Station Color: </p>
+                                <select id="station_color" name="station_color">
+                                    <option value="blue">Blue</option>
+                                    <option value="dark-blue">Dark Blue</option>
+                                    <option value="red">Red</option>
+                                    <option value="purple">Purple</option>
+                                    <option value="yellow">Yellow</option>
+                                    <option value="orange">Orange</option>
+                                    <option value="deep-orange">Deep Orange</option>
+                                    <option value="green">Green</option>
+                                    <option value="pink">Pink</option>
+                                    <option value="lime">Lime</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="modal-row" style="margin-top: 10px;">
+                            <div id="location_picker" class="location-picker">
+                                <p>Station Location:</p>
+                                <div id="station_form_map"></div>
+                                <div class="location-input">
+                                    <input id="station_address_input" type="text" placeholder="123 Main Street, Hampton, VA, 23602">
+                                    <a id="validate_address" class="material-icons" data-tooltip="Collapse" data-direction="up">search</a>
+                                    <span id="address_is_valid" class="is-valid">
+                                        <i class="material-icons">question_mark</i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-row" style="margin-top: 10px; margin-bottom: 10px;">
+                            <label class="container-checkbox" style="margin-left: 7px">
+                                Display station name on bus
+                                <input type="checkbox" id="station_bus_display" name="station_bus_display">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="modal-row" style="margin-top: 10px;">
+                            <label class="input-label full">
+                                <p>Notes: </p>
+                                <textarea class="notes scrollbar-primary" id="station_notes" name="station_notes" maxlength="150" rows="0" cols="0"></textarea>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <a id="station_modal_cancel" href="#" class="toolbar-btn push-left close" style="margin-left: unset !important;">
+                        <span>CANCEL</span>
+                    </a>
+                    <a id="station_modal_submit" href="#" class="toolbar-btn">
+                        <span>{{fill}}</span>
+                    </a>
+                </div>
+            </div>
+
+            <!--RST Modal-->
+            <div id="rst_modal" class="modal" data-persist>
+                <div class="modal-header">
+                    <h1>{{fill}}</h1>
+                </div>
+                <div class="modal-content scrollbar-primary">
+                    <form id="rst_form">
+                        <div class="modal-row" style="margin-top: 10px;">
+                            <label class="input-label full">
+                                <p>RST Name: </p>
+                                <input placeholder="Red Line East M-F" type="inline-large" id="rst_name" name="rst_name">
+                            </label>
+                        </div>
+                        <div class="modal-row" style="margin-top: 10px;">
+                            <label class="input-label full">
+                                <p>Color: </p>
+                                <select id="rst_color" name="rst_color">
+                                    <option value="blue">Blue</option>
+                                    <option value="dark-blue">Dark Blue</option>
+                                    <option value="red">Red</option>
+                                    <option value="purple">Purple</option>
+                                    <option value="yellow">Yellow</option>
+                                    <option value="orange">Orange</option>
+                                    <option value="deep-orange">Deep Orange</option>
+                                    <option value="green">Green</option>
+                                    <option value="pink">Pink</option>
+                                    <option value="lime">Lime</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="modal-row" style="margin-top: 10px;">
+                            <label class="input-label">
+                                <p>Minimum Start Layover: </p>
+                                <input placeholder="5" type="modal-input" id="rst_start_layover" name="rst_start_layover">
+                            </label>
+                            <label class="input-label">
+                                <p>Minimum End Layover: </p>
+                                <input placeholder="0" type="modal-input" id="rst_end_layover" name="rst_end_layover">
+                            </label>
+                        </div>
+                        <div class="modal-row">
+                            <label class="input-label">
+                                <p>Apply to: </p>
+                                <div id="rst_weekdays_selector" class="weekdays-selector">
+                                    <input type="checkbox" id="rst_monday" class="weekday" />
+                                    <label for="rst_monday">M</label>
+                                    <input type="checkbox" id="rst_tuesday" class="weekday" />
+                                    <label for="rst_tuesday">T</label>
+                                    <input type="checkbox" id="rst_wednesday" class="weekday" />
+                                    <label for="rst_wednesday">W</label>
+                                    <input type="checkbox" id="rst_thursday" class="weekday" />
+                                    <label for="rst_thursday">R</label>
+                                    <input type="checkbox" id="rst_friday" class="weekday" />
+                                    <label for="rst_friday">F</label>
+                                    <input type="checkbox" id="rst_saturday" class="weekday" />
+                                    <label for="rst_saturday">S</label>
+                                    <input type="checkbox" id="rst_sunday" class="weekday" />
+                                    <label for="rst_sunday">U</label>
+                                </div>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <a id="rst_modal_cancel" href="#" class="toolbar-btn push-left close"
+                        style="margin-left: unset !important;">
+                        <span>CANCEL</span>
+                    </a>
+                    <a id="rst_modal_submit" href="#" class="toolbar-btn">
+                        <span>{{fill}}</span>
+                    </a>
+                </div>
+            </div>
+
+            <!--Confirmation Modal-->
+            <div id="confirmation_modal" class="modal small no-footer" data-persist>
+                <div class="modal-header">
+                    <h1>Confirm Action</h1>
+                </div>
+                <div class="modal-content">
+                    <div class="modal-row" style="margin-top: 10px; text-align: center;">
+                        <p id="confirmation_message" class="large-text">{{fill}}</p>
+                    </div>
+                    <div class="modal-row center" style="margin-top: 20px;">
+                        <button id="confirmation_reject" class="confirm close">
+                            GO BACK
+                        </button>
+                        <button id="confirmation_confirm" class="reject close">
+                            DELETE
+                            <i class="material-icons">delete_forever</i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!--Saving Modal-->
+            <div id="processing_modal" class="modal no-footer"  style="width: 300px;" data-persist>
+                <div class="modal-header">
+                    <h1>Saving....</h1>
+                </div>
+                <div class="modal-content">
+                    <progress value="25" max="100"></progress>
+                </div>
+            </div>
+        </main>
+        <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=###&libraries=geometry,places&v=beta"></script>
+        <script type="module" src="../js/RST_Builder/main.js"></script>
+    </body> 
+</html>

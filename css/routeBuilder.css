@@ -1,0 +1,132 @@
+.route-builder {
+    position: relative;
+    flex: 3 1 auto;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 415px;
+    overflow-x: auto;
+    overflow-y: scroll;
+    border-radius: 2px;
+    background-color: var(--section-light-color);
+}
+
+.route-builder .rsc-id-container {
+    flex-shrink: 0;
+    width: 75px;
+    min-height: 100%;
+    height: fit-content;
+    background-color: var(--section-dark-color);
+    border-radius: 2px 0 0 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.route-builder .rsc-id-container .rsc-id-entry {
+    width: 100%;
+    height: 60px;
+    font-size: 14px;
+    line-height: 32px;
+    text-align: middle;
+}
+
+.route-builder .rsc-id-container .rsc-id-entry:hover {
+    background-color: var(--highlight-color);
+    cursor: pointer;
+}
+
+.route-builder .rsc-id-container .rsc-id-entry>p {
+    border: none;
+    color: white;
+    line-height: 15px;
+    height: 15px;
+    width: 90%;
+    padding: 2px 0 2px 0;
+    margin: auto;
+    margin-top: 10px;
+    background-color: var(--highlight-color);
+    border-radius: 2px;
+    overflow: hidden;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.route-builder .rsc-id-container .rsc-id-entry.selected>p {
+    background-color: initial;
+}
+
+.route-builder .rsc-id-container .rsc-id-entry>div:first-of-type {
+    width: 10px;
+    height: 10px;
+    margin: auto;
+    margin: 10px auto 0px auto;
+    border-radius: 5px;
+}
+
+.route-builder .rsc-id-container .rsc-id-entry .divider {
+    width: calc(100% - 10px);
+    height: 1px;
+    margin: 10px 5px 0px 5px;
+}
+
+.route-builder .rsc-id-container .rsc-id-add {
+    width: 50px;
+    height: 60px;
+    margin-top: 10px;
+    line-height: 60px;
+    font-size: 48px;
+}
+
+.route-builder .route-builder-content {
+    position: relative;
+    flex-shrink: 0;
+    min-width: calc(100% - 75px);
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.route-builder .route-builder-content:empty::after {
+    content: "No Routes Have Been Made \01F6E3\FE0F";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 2px);
+    height: 75px;
+    line-height: 75px;
+    font-size: 24px;
+    border: 1px dashed white;
+    border-radius: 2px;
+}
+
+.route-builder .route-builder-content .route {
+    height: 60px;
+    padding: 0 25px 0 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style-type: none;
+}
+
+.route-builder .route-builder-content .route:not(.selected):hover {
+    background-color: var(--highlight-color);
+}
+
+.route-builder .route-builder-content .route .route-center {
+    position: absolute;
+    min-width: calc(100% - 50px);
+    border-bottom: 1px dashed #bdbdbd;
+}
+
+.route-builder .route-builder-content .route .rst-block {
+    margin-right: 30px;
+    max-width: fit-content;
+    margin-left: -2px;
+}
+
+.selected {
+    background-color: var(--selected-color);
+}
